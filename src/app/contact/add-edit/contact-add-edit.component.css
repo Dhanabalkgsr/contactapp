@@ -1,0 +1,12 @@
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  padding: 5px;
+}
+
+.error-txt {
+  color: red;
+}
+

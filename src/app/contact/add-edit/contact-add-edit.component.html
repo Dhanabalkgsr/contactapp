@@ -1,0 +1,105 @@
+<div class="container">
+  <form  [formGroup]="contactFrom">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="flex flex-column gap-2">
+                <label htmlFor="FirstName">First Name</label>
+          <input type="text" formControlName="firstName" class="form-control" />
+                <small class="error-txt" *ngIf="IsSubmit && contactFrom.get('firstName')?.invalid">First Name is required.</small>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-xs-12">
+          <div class="flex flex-column gap-2">
+              <label htmlFor="LastName">Last Name</label>
+          <input type="text" formControlName="lastName" class="form-control" />
+
+              <small class="error-txt" *ngIf="IsSubmit && contactFrom.get('lastName')?.invalid">Last Name is required.</small>
+          </div>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+        <div class="flex flex-column gap-2">
+            <label htmlFor="Email">Email</label>
+          <input type="text" formControlName="email" class="form-control" />
+
+            <small class="error-txt" *ngIf="IsSubmit && contactFrom.get('email')?.invalid">Email is required.</small>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+      <div class="flex flex-column gap-2">
+          <label htmlFor="PhoneNumber">PhoneNumber</label>
+          <input type="number" formControlName="phoneNumber" class="form-control" />
+
+          <small class="error-txt" *ngIf="IsSubmit && contactFrom.get('phoneNumber')?.invalid">Phone Number is required.</small>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+      <div class="flex flex-column gap-2">
+          <label htmlFor="Address">Address</label>
+          <input type="text" formControlName="address" class="form-control" />
+
+          <small class="error-txt" *ngIf="IsSubmit && contactFrom.get('address')?.invalid">Address is required.</small>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+      <div class="flex flex-column gap-2">
+          <label htmlFor="City">City</label>
+          <input type="text" formControlName="city" class="form-control" />
+
+          <small class="error-txt" *ngIf="IsSubmit && contactFrom.get('city')?.invalid">City is required.</small>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+      <div class="flex flex-column gap-2">
+          <label htmlFor="State">State</label>
+          <input type="text" formControlName="state" class="form-control" />
+
+          <small class="error-txt" *ngIf="IsSubmit && contactFrom.get('state')?.invalid">State is required.</small>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+      <div class="flex flex-column gap-2">
+          <label htmlFor="Country">Country</label>
+          <input type="text" formControlName="country" class="form-control" />
+          <small class="error-txt" *ngIf="IsSubmit && contactFrom.get('country')?.invalid">Country is required.</small>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+      <div class="flex flex-column gap-2">
+          <label htmlFor="PostalCode">PostalCode</label>
+          <input type="number" formControlName="postalCode" class="form-control" />
+          <small class="error-txt" *ngIf="IsSubmit && contactFrom.get('postalCode')?.invalid">PostalCode is required.</small>
+      </div>
+  </div>
+</div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p-button [label]="btnText" icon="pi pi-check" styleClass="p-button-sm" (click)="saveupdate()"></p-button>
+      </div>
+  </div>
+</form>
+</div>

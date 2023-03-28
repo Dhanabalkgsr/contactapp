@@ -1,0 +1,8 @@
+{
+  "/echo": {
+    "target": "http://api.positionstack.com/v1/forward?access_key=3834993ff7cef203ae727dca635572d1&query=",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel":"debug"
+  }
+}

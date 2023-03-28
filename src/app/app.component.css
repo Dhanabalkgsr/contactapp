@@ -1,0 +1,24 @@
+.pageLayout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+.header {
+    height: 10vh;
+}
+
+.maincontent {
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.footer {
+    height: 10vh;
+}
+
+.txt-center {
+    display: flex;
+    justify-content: center;
+}

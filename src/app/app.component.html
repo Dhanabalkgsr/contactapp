@@ -1,0 +1,28 @@
+  <div class="pageLayout">
+    <div class="header">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">ContactApp</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav">
+                  <a href="#" class="nav-item nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="">Contacts</a>
+                  <a href="#" class="nav-item nav-link" routerLinkActive="active" [routerLink]="['addedit','0']">Add</a>
+              </div>
+              <div class="navbar-nav ms-auto">
+
+              </div>
+          </div>
+      </div>
+    </nav>
+    </div>
+    <div class="maincontent"><router-outlet></router-outlet></div>
+    <div class="footer">
+      <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark txt-center">
+       <label style="color: white;">Contact Footer</label>
+      </nav>
+    </div>
+  </div>
+

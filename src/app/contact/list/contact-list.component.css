@@ -1,0 +1,9 @@
+.pull-right {
+    text-align: end;
+    padding-bottom: 10px;
+}
+
+.pi-leftdf {
+  padding-left: 5px;
+  cursor: pointer;
+}

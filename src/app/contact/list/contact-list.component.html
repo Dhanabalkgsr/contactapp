@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <!-- <div class="row">
+        <div class="col-xs-12 pull-right">
+            <p-button label="Add Contact" icon="pi pi-plus" styleClass="p-button-sm"></p-button>
+        </div>
+    </div> -->
+    <div class="row">
+        <div class="col-xs-12">
+            <p-table [value]="contactList" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[10, 25, 50]">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pSortableColumn="firstName">FirstName <p-sortIcon field="firstName"></p-sortIcon></th>
+                        <th pSortableColumn="lastName"> LastName<p-sortIcon field="lastName"></p-sortIcon></th>
+                        <th pSortableColumn="email">Email <p-sortIcon field="email"></p-sortIcon></th>
+                        <th pSortableColumn="phoneNumber">PhoneNumber <p-sortIcon field="phoneNumber"></p-sortIcon></th>
+                        <th pSortableColumn="address">Address <p-sortIcon field="address"></p-sortIcon></th>
+                        <th pSortableColumn="city">City <p-sortIcon field="city"></p-sortIcon></th>
+                        <th pSortableColumn="state">State <p-sortIcon field="state"></p-sortIcon></th>
+                        <th pSortableColumn="country">Country <p-sortIcon field="country"></p-sortIcon></th>
+                        <th pSortableColumn="postalCode">PostalCode <p-sortIcon field="postalCode"></p-sortIcon></th>
+
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-c>
+                    <tr>
+                        <td>{{ c.firstName }} <i class="pi pi-pencil pi-leftdf" (click)="edit(c.contactId)"></i>
+                          <i class="pi pi-trash pi-leftdf" (click)="deletes(c.contactId)"></i>
+                          <i class="pi pi-eye pi-leftdf" (click)="viewmap(c)"></i></td>
+                        <td>{{ c.lastName }}</td>
+                        <td>{{ c.email }}</td>
+                        <td>{{ c.phoneNumber }}</td>
+                        <td>{{ c.address }}</td>
+                        <td>{{ c.city }}</td>
+                        <td>{{ c.state }}</td>
+                        <td>{{ c.country }}</td>
+                        <td>{{ c.postalCode }}</td>
+                      </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
+
+
+
+<p-dialog header="View Contact" [(visible)]="isShowMap" [style]="{width: '80vw'}">
+  <app-googlemap  [contact]="selectedContact"></app-googlemap>
+</p-dialog>
